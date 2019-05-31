@@ -1,24 +1,30 @@
 import React,{Component} from "react";
-import Form from "../form";
-import Weather from "../Weather"
-const API_KEY = "cbc0da5e7e95f93d8a1b576cc7f9f99f";
+import Form from "./Form";
+import Weather from "./Weather"
+import {fetchWeather} from "../actions/weatherActions";
+import ErrorMessage from "../templates/ErrorMessage";
 
+class App extends Component{
 
-class App extends React.Component{
-    constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
+      isLoaded: true,
       temperature: undefined,
       country: undefined,
       city : undefined,
       humidity: undefined,
       description: undefined,
-      error: undefined
+      error: undefined,
     };
   }
-  componentDidMount() {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=Cordoba,AR&appid=${API_KEY}&units=metric`)
-      .then(res => res.json())
+
+  onSubmit() {
+    console.log("Changing " + this.state.city + this.state.country);
+    this.setState({
+      isLoaded: false
+    });
+    fetchWeather(this.state.city)
       .then(
         (result) => {
           this.setState({
@@ -30,24 +36,24 @@ class App extends React.Component{
             description: result.weather[0].description,
             error:""
           });
-        },
-
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (error) => {
+        }).catch((error) => {
           this.setState({
             isLoaded: true,
-            error
-          });
-        }
-      )
+            error: error
+          })
+        });
+  }
+
+  onInputChange(name, value) {
+    this.setState({
+      [name]: value
+    })
   }
 
   render() {
     const { error, isLoaded } = this.state;
     if (error) {
-      return <div>Error: {error.message}</div>;
+      return <ErrorMessage visible={true} message={error.message} /> ;
     } else if (!isLoaded) {
       return <div>Loading...</div>;
     } else {
@@ -59,7 +65,9 @@ class App extends React.Component{
         </div>
         <div className={"Form"} style={{display: 'flex',justifyContent:'center',
          alignItems: 'center' }}>
-           < Form />
+           < Form
+             onSubmit={this.onSubmit.bind(this)}
+             onInputChange={this.onInputChange.bind(this)} />
            <Weather
             temperature={this.state.temperature}
             country={this.state.country}
