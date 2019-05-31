@@ -10,13 +10,14 @@ class App extends React.Component{
     this.state = {
       temperature: undefined,
       country: undefined,
+      city : undefined,
       humidity: undefined,
       description: undefined,
       error: undefined
     };
   }
   componentDidMount() {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=London&appid=${API_KEY}`)
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=Cordoba,AR&appid=${API_KEY}&units=metric`)
       .then(res => res.json())
       .then(
         (result) => {
@@ -24,6 +25,7 @@ class App extends React.Component{
             isLoaded: true,
             temperature: result.main.temp,
             country: result.sys.country,
+            city : result.name,
             humidity:result.main.humidity,
             description: result.weather[0].description,
             error:""
@@ -61,6 +63,7 @@ class App extends React.Component{
            <Weather
             temperature={this.state.temperature}
             country={this.state.country}
+            city = {this.state.city}
             humidity={this.state.humidity}
             description={this.state.description}
             error={this.state.error}

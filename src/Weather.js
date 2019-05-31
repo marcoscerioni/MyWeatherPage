@@ -8,7 +8,7 @@ class Weather extends React.Component{
 
             <div className="weather-info" >
                 {
-                    this.props.country && <p className="weather__key">Location:
+                    this.props.country && this.props.city && <p className="weather__key">Location:
                         <span className="weather__value"> {this.props.country}</span>
                     </p>
                 }
