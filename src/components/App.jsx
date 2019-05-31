@@ -83,8 +83,8 @@ class App extends Component{
            preassure = {this.state.preassure}
            humidity = {this.state.humidity}
            wind = {this.state.wind}
-           Min Temp = {this.state.temperature_min}
-           Max Temp = {this.state.temperature_max}
+           temperature_min = {this.state.temperature_min}
+           temperature_max = {this.state.temperature_max}
            sunrise = {this.state.sunrise}
            sunset = {this.state.sunset}
          />

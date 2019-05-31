@@ -6,7 +6,8 @@ class Weather extends React.Component{
 
         return(
 
-            <div className="weather-info" >
+            <div className="weather-info" style={{display: 'flex',justifyContent:'center',
+              alignItems: 'center' }}>
                 {
                     this.props.pressure && <p className="weather__key">Pressure:
                         <span className="weather__value"> {this.props.pressure}</span>
@@ -25,12 +26,12 @@ class Weather extends React.Component{
                 }
 
                 {
-                    this.props.temperature_min && <p className="weather__key">Temp Min:
+                    this.props.temperature_min && <p className="weather__key">TempMin:
                         <span className="weather__value">  {this.props.temperature_min}</span>
                     </p>
                 }
                 {
-                    this.props.temperature_max && <p className="weather__key">Temp Max:
+                    this.props.temperature_max && <p className="weather__key">TempMax:
                         <span className="weather__value">  {this.props.temperature_max}</span>
                     </p>
                 }
