@@ -4,7 +4,7 @@ class Form extends React.Component{
 
     render(){
         return(
-                <form onSubmit = "">
+                <form onSubmit = "hola">
                     <input type="text" name="country" placeholder="Enter your location"/>
                     <button>Check Weather</button>
                 </form>

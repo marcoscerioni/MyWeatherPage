@@ -1,5 +1,6 @@
 import React,{Component} from "react";
 import Form from "../form";
+import Weather from "../Weather"
 const API_KEY = "cbc0da5e7e95f93d8a1b576cc7f9f99f";
 
 
@@ -42,19 +43,30 @@ class App extends React.Component{
   }
 
   render() {
-    const { error, isLoaded, temperature, country, description, humidity } = this.state;
+    const { error, isLoaded } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
       return <div>Loading...</div>;
     } else {
       return (
-        <ul>
-            <li>
-              {temperature}{country}{description}{humidity}
-            </li>
-          ))}
-        </ul>
+       <div>
+      <div className={"Title"} style={{display: 'flex',justifyContent:'center',
+         alignItems: 'center' }}>
+       <h1>Welcome to my MayWeather</h1>
+        </div>
+        <div className={"Form"} style={{display: 'flex',justifyContent:'center',
+         alignItems: 'center' }}>
+           < Form />
+           <Weather
+            temperature={this.state.temperature}
+            country={this.state.country}
+            humidity={this.state.humidity}
+            description={this.state.description}
+            error={this.state.error}
+           />
+          </div>
+      </div>
       );
     }
   }
