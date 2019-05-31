@@ -10,32 +10,41 @@ class App extends Component{
     super(props);
     this.state = {
       isLoaded: true,
-      temperature: undefined,
       country: undefined,
       city : undefined,
-      humidity: undefined,
       description: undefined,
+      preassure : undefined,
+      humidity : undefined,
+      wind: undefined,
+      temperature_min: undefined,
+      temperature_max : undefined,
+      sunrise: undefined,
+      sunset:undefined,
       error: undefined,
     };
   }
 
   onSubmit() {
-    console.log("Changing " + this.state.city + this.state.country);
+    console.log("Changing " + this.state.city +  this.state.country);
     this.setState({
       isLoaded: false
     });
-    fetchWeather(this.state.city)
+    fetchWeather(this.state.city , this.state.country)
       .then(
         (result) => {
           this.setState({
             isLoaded: true,
-            temperature: result.main.temp,
-            country: result.sys.country,
-            city : result.name,
-            humidity:result.main.humidity,
-            description: result.weather[0].description,
-            error:""
+            description: result.weather.main,
+            preassure : result.main.pressure,
+            humidity : result.main.humidity,
+            wind: result.wind.speed,
+            temperature_min: result.main.temp_min,
+            temperature_max : result.main.temp_max,
+            sunrise: result.sys.sunrise,
+            sunset : result.sys.sunset,
+            error: "",
           });
+          console.log(result)
         }).catch((error) => {
           this.setState({
             isLoaded: true,
@@ -68,15 +77,18 @@ class App extends Component{
            < Form
              onSubmit={this.onSubmit.bind(this)}
              onInputChange={this.onInputChange.bind(this)} />
-           <Weather
-            temperature={this.state.temperature}
-            country={this.state.country}
-            city = {this.state.city}
-            humidity={this.state.humidity}
-            description={this.state.description}
-            error={this.state.error}
-           />
           </div>
+         <div>
+         <Weather
+           preassure = {this.state.preassure}
+           humidity = {this.state.humidity}
+           wind = {this.state.wind}
+           Min Temp = {this.state.temperature_min}
+           Max Temp = {this.state.temperature_max}
+           sunrise = {this.state.sunrise}
+           sunset = {this.state.sunset}
+         />
+       </div>
       </div>
       );
     }
