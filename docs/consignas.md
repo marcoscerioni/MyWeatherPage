@@ -1,4 +1,4 @@
-# Lab 3 - Proyecto MayWeather (a.k.a My Weather)
+# Lab 3 - Proyecto MayWeather (a.k.a My Current)
 
 ![](img/mayweather.jpeg)
 
