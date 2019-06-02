@@ -1,6 +1,7 @@
 import React from "react";
 import {fetchWeather} from "../../../actions/weatherActions";
 import ErrorMessage from "../../../templates/ErrorMessage";
+import LoadingThrob from "../../../templates/LoadingThrobber"
 
 class Current extends React.Component{
 
@@ -49,7 +50,7 @@ class Current extends React.Component{
 
     if (this.state.loading) {
       // TODO: create a loading template
-      return <ErrorMessage visible={true} message={"Loading"}/>
+      return <LoadingThrob visible={true}/>
     }
 
     return(
