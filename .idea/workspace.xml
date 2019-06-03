@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acc779c1-2038-460e-a84a-8eacfaaf8244" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/grupo03_lab03_2019.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsonSchemas.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,7 +14,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/App.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,6 +54,12 @@
               <item name="grupo03_lab03_2019" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="grupo03_lab03_2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grupo03_lab03_2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -61,8 +70,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="prettierjs.PrettierConfiguration.Package" value="$USER_HOME$/.nvm/versions/node/v10.15.3/lib/node_modules/prettier" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/../.nvm/versions/node/v10.15.3/lib/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RunDashboard">
@@ -83,7 +98,7 @@
     </configuration>
     <configuration name="Unnamed" type="ReactNative" factoryName="React Native" nameIsGenerated="true">
       <node-interpreter value="project" />
-      <react-native value="$USER_HOME$/.nvm/versions/node/v10.15.3/lib/node_modules/react-native-cli" />
+      <react-native value="$PROJECT_DIR$/../.nvm/versions/node/v10.15.3/lib/node_modules/react-native-cli" />
       <platform value="ANDROID" />
       <envs />
       <only-packager />
@@ -125,11 +140,13 @@
       <updated>1558966533384</updated>
       <workItem from="1558966536940" duration="2877000" />
       <workItem from="1558969552547" duration="236000" />
+      <workItem from="1559323585889" duration="826000" />
+      <workItem from="1559530101614" duration="594000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3113000" />
+    <option name="totallyTimeSpent" value="4533000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -141,15 +158,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-32" width="1920" height="1112" extended-state="6" />
+    <frame x="0" y="25" width="1366" height="704" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18133895" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1809382" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32983193" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33511585" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -158,7 +175,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32885212" />
       <window_info anchor="bottom" id="GraphQL" order="9" weight="0.32885212" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002636" side_tool="true" weight="0.38340336" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49973643" visible="true" weight="0.38262668" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49973643" weight="0.3957219" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -235,7 +252,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/App.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
+        <state relative-caret-position="21">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
