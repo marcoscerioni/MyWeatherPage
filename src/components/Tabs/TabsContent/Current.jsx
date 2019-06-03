@@ -54,8 +54,7 @@ class Current extends React.Component{
     }
 
     return(
-      <div className="weather-info" style={{display: 'flex',justifyContent:'center',
-        alignItems: 'center' }}>
+      <div className="weather-info" >
         <p className="weather__key">Pressure:
           <span className="weather__value"> {this.state.pressure + "hpm"}</span>
         </p>
