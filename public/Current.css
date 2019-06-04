@@ -6,6 +6,29 @@ body{
 }
 
 
+.current{
+    background: blue;
+    font-size: x-large;
+    animation: alternate;
+    justify-content: center;
+}
+
+.forecast{
+    background: blue;
+    font-size: x-large;
+    animation: alternate;
+    justify-content: center;
+}
+.uvi{
+    background: blue;
+    font-size: x-large;
+    animation: alternate;
+    justify-content: center;
+    position: relative;
+    align-content: center;
+}
+
+
 .weather-info{
     height: 300px;
     width: 485px;
