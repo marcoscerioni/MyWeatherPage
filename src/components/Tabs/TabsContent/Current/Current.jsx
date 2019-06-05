@@ -1,7 +1,7 @@
 import React from "react";
-import {fetchWeather} from "../../../actions/weatherActions";
-import ErrorMessage from "../../../templates/ErrorMessage";
-import LoadingThrob from "../../../templates/LoadingThrobber"
+import {fetchCurrent} from "../../../../actions/weatherActions";
+import ErrorMessage from "../../../../templates/ErrorMessage";
+import LoadingThrob from "../../../../templates/LoadingThrobber"
 
 class Current extends React.Component{
 
@@ -14,57 +14,41 @@ class Current extends React.Component{
   }
 
   componentDidMount() {
-    this.fetchWeather(this.props.city, this.props.country)
+    this.fetchCurrent(this.props.city, this.props.country)
   }
 
   componentWillReceiveProps(newProps) {
-    this.fetchWeather(newProps.city, newProps.country)
+    this.fetchCurrent(newProps.city, newProps.country)
   }
 
-  fetchWeather(city, country) {
+  fetchCurrent(city, country) {
     this.setState({ loading: true });
-    fetchWeather(city, country)
+    fetchCurrent(city, country)
       .then(
         (result) => {
-          this.setState({
-            description: result.weather.main,
-            pressure : result.main.pressure,
-            humidity : result.main.humidity,
-            wind: result.wind.speed,
-            temperature : result.main.temp,
-            temperature_min: result.main.temp_min,
-            temperature_max : result.main.temp_max,
-            sunrise: result.sys.sunrise,
-            sunset : result.sys.sunset,
-            loading: false, error: false
-
-          });
-          console.log(result)
+          this.setState(result);
+          console.log(result);
         }).catch((error) => {
       this.setState({ error: true });
     });
   }
 
-  render(){
-    const convert = (props) => {
-      let date = new Date(1000*props);
-      return (date.toTimeString().split(' ')[0])
-    };
+  static convert(epoch) {
+    let date = new Date(1000*epoch);
+    return (date.toTimeString().split(' ')[0])
+  };
 
+  render(){
     if (this.state.error) {
       return <ErrorMessage visible={true} message={"An error occurred"}/>
     }
 
     if (this.state.loading) {
-      // TODO: create a loading template
       return <LoadingThrob visible={true}/>
     }
 
     return(
       <div>
-          <button className={"current"}> Current </button>
-          <button className={"forecast"}> Forecast </button>
-          <button className={"uvi"}> UVI </button>
         <div className="weather-info" >
           <p className="weather__key">Pressure:
             <span className="weather__value"> {this.state.pressure + "hpm"}</span>
@@ -85,10 +69,10 @@ class Current extends React.Component{
             <span className="weather__value">  {this.state.temperature_max + "°C"}</span>
           </p>
           <p className="weather__key">Sunrise:
-            <span className="weather__value">  {convert(this.state.sunrise)}</span>
+            <span className="weather__value">  {Current.convert(this.state.sunrise)}</span>
           </p>
           <p className="weather__key">Sunset:
-            <span className="weather__value">  {convert(this.state.sunset)}</span>
+            <span className="weather__value">  {Current.convert(this.state.sunset)}</span>
           </p>
         </div>
       </div>

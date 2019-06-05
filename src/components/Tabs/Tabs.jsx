@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {tabStates} from "../../constants/tabStates";
-import Current from "./TabsContent/Current";
+import Current from "./TabsContent/Current/Current";
+import Forecast from "./TabsContent/Forecast/Forecast";
 
 export default class Tabs extends Component {
 
@@ -11,17 +12,24 @@ export default class Tabs extends Component {
     }
   }
 
-  // render methods
+  // state handler methods
+  changeChildState(event) {
+    this.setState({
+      curState: parseInt(event.target.id)
+    })
+  }
 
+  // render methods
   getChildFromCurState() {
-    console.log(this.props);
     switch (this.state.curState) {
       case tabStates.CURRENT:
         return <Current
-                  city={this.props.city}
-                  country={this.props.country} />;
+          city={this.props.city}
+          country={this.props.country} />;
       case tabStates.FORECAST:
-        return <div>NOT IMPLEMENTED</div>;
+        return <Forecast
+          city={this.props.city}
+          country={this.props.country} />;
       case tabStates.UVI:
         return <div>NOT IMPLEMENTED</div>;
       default:
@@ -30,13 +38,30 @@ export default class Tabs extends Component {
   }
 
   render() {
-
     if (!this.props.visible) {
       return null;
     }
 
-
-    return this.getChildFromCurState();
+    return (
+      <div>
+        <button className={"current"}
+                id={tabStates.CURRENT}
+                onClick={this.changeChildState.bind(this)}>
+          Current
+        </button>
+        <button className={"forecast"}
+                id={tabStates.FORECAST}
+                onClick={this.changeChildState.bind(this)}>
+          Forecast
+        </button>
+        <button className={"uvi"}
+                id={tabStates.UVI}
+                onClick={this.changeChildState.bind(this)}>
+          UVI
+        </button>
+        {this.getChildFromCurState()}
+      </div>
+    )
   }
 
 }
