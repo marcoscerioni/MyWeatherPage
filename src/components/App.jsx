@@ -32,7 +32,7 @@ class App extends Component{
 
         <div className={"Title"} style={{display: 'flex',justifyContent:'center',
           alignItems: 'center' }}>
-          <h1>Welcome to my MayWeather</h1>
+          <h1>Welcome to MayWeather</h1>
         </div>
 
         <Form
