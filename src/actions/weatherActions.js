@@ -1,4 +1,4 @@
-import {API_KEY, API_URL} from "../constants/apiConstants";
+import {API_ICON, API_KEY, API_URL} from "../constants/apiConstants";
 
 export function fetchCurrent(city, country, units="metric") {
   return fetch(
@@ -7,8 +7,9 @@ export function fetchCurrent(city, country, units="metric") {
       console.log(res);
       return res.json()
     }).then(result => {
+      console.log(result);
       return {
-            description: result.weather.main,
+            icon: result.weather[0].icon,
             pressure : result.main.pressure,
             humidity : result.main.humidity,
             wind: result.wind.speed,
@@ -21,6 +22,7 @@ export function fetchCurrent(city, country, units="metric") {
           };
     });
 }
+
 
 export function fetchForecast(city, country) {
   return [

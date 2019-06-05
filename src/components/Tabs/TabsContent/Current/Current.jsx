@@ -40,7 +40,8 @@ class Current extends React.Component{
 
   render(){
     if (this.state.error) {
-      return <ErrorMessage visible={true} message={"An error occurred"}/>
+      return <ErrorMessage visible={true} message={"An error occurred or city not" +
+      " exist"}/>
     }
 
     if (this.state.loading) {
@@ -50,6 +51,10 @@ class Current extends React.Component{
     return(
       <div>
         <div className="weather-info" >
+          <p className="weather__key">
+            <span className="weather__value"> <img src= {"http://openweathermap.org/img/w/"
+            + this.state.icon + ".png"}/></span>
+          </p>
           <p className="weather__key">Pressure:
             <span className="weather__value"> {this.state.pressure + "hpm"}</span>
           </p>
