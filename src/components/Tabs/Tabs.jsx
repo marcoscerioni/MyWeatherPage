@@ -44,21 +44,61 @@ export default class Tabs extends Component {
 
     return (
       <div>
-        <button className={"current"}
-                id={tabStates.CURRENT}
-                onClick={this.changeChildState.bind(this)}>
-          Current
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+          <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-lightblue.min.css"/>
+            <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+          <div className="col">
+        <html>
+        <head>
+          <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+          <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-lightblue.min.css"/>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+        </head>
+        <body>
+        <button className={"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"}
+            id={tabStates.CURRENT} onClick={this.changeChildState.bind(this)}>
+            Current
         </button>
-        <button className={"forecast"}
-                id={tabStates.FORECAST}
-                onClick={this.changeChildState.bind(this)}>
-          Forecast
+        </body>
+        </html>
+          </div>
+
+
+          <div className="col">
+        <html>
+        <head>
+          <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+          <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-lightblue.min.css"/>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+        </head>
+        <body>
+        <button className={"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"}
+                id={tabStates.FORECAST} onClick={this.changeChildState.bind(this)}>
+            Forecast
         </button>
-        <button className={"uvi"}
-                id={tabStates.UVI}
-                onClick={this.changeChildState.bind(this)}>
+        </body>
+        </html>
+          </div>
+
+
+              <div className="col">
+        <html>
+        <head>
+          <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+          <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-lightblue.min.css"/>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+        </head>
+        <body>
+        <button className={"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"}
+        id={tabStates.UVI} onClick={this.changeChildState.bind(this)}>
           UVI
         </button>
+        </body>
+        </html>
+              </div>
+
         {this.getChildFromCurState()}
       </div>
     )
