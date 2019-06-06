@@ -4,7 +4,9 @@ import React from 'react';
  * @return {null}
  */
 export default function LoadingThrob({visible}) {
-  if (!visible) { return null; }
+  if (!visible) {
+      {return null;}
+  }
   return (
     <div className="sk-fading-circle">
       <div className="sk-circle1 sk-circle"></div>

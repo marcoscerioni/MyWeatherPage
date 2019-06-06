@@ -24,8 +24,27 @@ export function fetchCurrent(city, country, units="metric") {
 }
 
 
-export function fetchForecast(city, country) {
-  return [
+export function fetchForecast(city, country, units="metric") {
+  return fetch(
+      `${API_URL}/forecast?q=${city},${country}&appid=${API_KEY}&units=${units}`)
+      .then(res => {
+        console.log("RESSSSS");
+        console.log(city);
+        console.log(country);
+        console.log(res);
+        return res.json()})
+      .then(result => {
+          console.log("RESULT");
+          console.log(result.list);
+          return {
+              loading: false,
+              error: false,
+              dayList: result.list,
+          };
+      });
+}
+
+  /*return [
     {
       dayName: "Mon",
       date: "01/05",
@@ -171,4 +190,4 @@ export function fetchForecast(city, country) {
       ]
     },
   ]
-}
+}*/

@@ -13,6 +13,7 @@ export default class Forecast extends Component {
       loading: true,
       error: false,
       showingDetails: false,
+
     }
   }
 
@@ -26,23 +27,27 @@ export default class Forecast extends Component {
     this.fetchForecast(newProps.city, newProps.country)
   }
 
+
   fetchForecast() {
     this.setState({ loading: true });
     setTimeout( () => {
-      this.setState({
-        loading: false,
-        error: false,
-        dayList: fetchForecast(null, null)
+      fetchForecast("Cordoba", "AR")
+      .then((result) => {
+        this.setState(result);
       })
-    }, 2000)
+      .catch((error) => {
+        this.setState({ error: true })}
+      );
+      this.showDetails();
+    }, 300);
   }
 
   // details state functions
 
-  showDetails(details) {
+  showDetails() {
     this.setState({
       showingDetails: true,
-      details: details
+
     })
   }
 
@@ -54,25 +59,29 @@ export default class Forecast extends Component {
 
   render() {
     if (this.state.error) {
+      console.log("ERRROR");
       return <ErrorMessage visible={true} message={"An error occurred"}/>
     }
 
     if (this.state.loading) {
+      console.log("LOADINGGGGGGGGGGGGGG");
       return <LoadingThrob visible={true}/>
     }
 
     if (this.state.showingDetails) {
+      console.log("DETAIL FORCAST");
+      console.log(this.state.dayList);
       return <ForecastCardDetail
                 onBack={this.unShowDetails.bind(this)}
-                details={this.state.details}/>
+                details={this.state.dayList}/>
     }
 
     return (
       <div>
-        {this.state.dayList.map((day, index) => {
+        {this.state.dayList.map((day) => {
+          console.log("FORECAST INTENTO");
           return <ForecastCard
             showDetails={this.showDetails.bind(this)}
-            key={index}
             day={day}
           />
         })}

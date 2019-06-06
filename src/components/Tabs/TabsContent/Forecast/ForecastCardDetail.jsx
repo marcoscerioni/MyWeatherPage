@@ -7,24 +7,14 @@ export default class ForecastCardDetail extends Component {
   }
 
   render() {
+    console.log("FORECAST DETAIL");
+    console.log(this.props.details);
     return (
       <div onClick={this.onBackClicked.bind(this)}>
         {this.props.details.map((detail) =>
           <div>
-            Description:
-            {detail.description}
-            Pressure:
-            {detail.pressure}
-            Humidity:
-            {detail.humidity}
-            Wind:
-            {detail.wind}
-            Temperature:
-            {detail.temperature}
-            Sunrise:
-            {detail.sunrise}
-            Sunset:
-            {detail.sunset}
+            Day:
+            {detail.dt_txt}
           </div>
         )}
       </div>
