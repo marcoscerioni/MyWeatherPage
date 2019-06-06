@@ -1,43 +1,58 @@
 body{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     height: 100%;
 }
+.col {
+    display: inline-block;
+    margin: 0 10px 0 10px;
+}
+.col1  {
+    text-align: left;
+}
+.temp {
+    font-family: "Roboto", sans-serif;
+    color: black;
+    font-size: 155rem;
+    font-weight: 700;
+    margin: 0;
+}
+.tempMinMax {
+    color: black;
+    font-size: xx-small;
+    font-weight: 900;
+    margin: 0;
+}
 
-.current{
-    background: blue;
-    font-size: x-large;
-    animation: alternate;
+.box1 {
+    margin: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-}
+    width: 45%;
+    background: grey;
+    border-radius: 12px;
+    padding: 20px 20px 40px 20px;
+    box-shadow: 0 4px 16px rgba(69, 79, 99, 0.1);
+    transition: all 0.7s ease-in-out;
 
-.forecast{
-    background: blue;
-    font-size: x-large;
-    animation: alternate;
+    }
+
+.box2 {
+    margin: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-
+    width: 45%;
+    background: grey;
+    border-radius: 12px;
+    padding: 20px 20px 40px 20px;
+    box-shadow: 0 4px 16px rgba(69, 79, 99, 0.1);
+    transition: all 0.7s ease-in-out;
 }
 
 
-.uvi{
-    background: blue;
-    font-size: x-large;
-    animation: alternate;
-    justify-content: center;
-    position: relative;
-    align-content: center;
-}
 
-.weather-info{
-    height: 350px;
-    width: 485px;
-    position: absolute;
-    top: -1%;
-    margin: 200px auto;
-    align-content: center;
-    background: white;
-    border-radius: 20px;
-    border: 4px solid grey;
-}
