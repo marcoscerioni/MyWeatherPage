@@ -4,109 +4,97 @@ import LoadingThrob from "../../../../templates/LoadingThrobber";
 import ForecastCard from "./ForecastCard";
 import ForecastCardDetail from "./ForecastCardDetail";
 import {fetchForecast} from "../../../../actions/weatherActions";
+import {getWeekDay} from "../../../../utils/dateUtils";
 
 export default class Forecast extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      loading: true,
-      error: false,
-      showingDetails: false,
-    };
-  }
-
-  // fetchForecast functions
-
-  componentDidMount() {
-    this.fetchForecast(this.props.city, this.props.country)
-  }
-
-  componentWillReceiveProps(newProps) {
-    this.fetchForecast(newProps.city, newProps.country)
-  }
-
-
-  fetchForecast() {
-    this.setState({ loading: true });
-    setTimeout( () => {
-      fetchForecast("Cordoba", "AR")
-      .then((result) => {
-        this.setState(result);
-      })
-      .catch((error) => {
-        this.setState({ error: true })}
-      );
-    }, 300);
-  }
-
-  // details state functions
-
-  showDetails(details) {
-    this.setState({
-      showingDetails: true,
-      details: details,
-    })
-  }
-
-  unShowDetails() {
-    this.setState({showingDetails: false})
-  }
-/*
-  toDay(){
-    const weekday = new Array(7);
-    weekday[0] = "Sunday";
-    weekday[1] = "Monday";
-    weekday[2] = "Tuesday";
-    weekday[3] = "Wednesday";
-    weekday[4] = "Thursday";
-    weekday[5] = "Friday";
-    weekday[6] = "Saturday";
-    const d = new Date();
-    if(x===5)
-      this.setState({x: 0});
-    this.setState({
-      toDay: weekday[(d.getDate() - (x-1))%7],
-    });
-  }*/
-  // render
-
-  render() {
-    if (this.state.error) {
-      console.log("ERRROR");
-      return <ErrorMessage visible={true} message={"An error occurred"}/>
+    constructor(props) {
+        super(props);
+        this.state = {
+            loading: true,
+            error: false,
+            showingDetails: false,
+        };
     }
 
-    if (this.state.loading) {
-      console.log("LOADINGGGGGGGGGGGGGG");
-      return <LoadingThrob visible={true}/>
+    // fetchForecast functions
+
+    componentDidMount() {
+        this.fetchForecast(this.props.city, this.props.country)
     }
 
-    if (this.state.showingDetails) {
-      console.log("DETAIL FORCAST");
-      console.log(this.state.showingDetails);
-      console.log(this.state.details);
-      return <ForecastCardDetail
+    componentWillReceiveProps(newProps) {
+        this.setState({showingDetails: false});
+        this.fetchForecast(newProps.city, newProps.country)
+    }
+
+
+    fetchForecast() {
+        this.setState({loading: true});
+        setTimeout(() => {
+            fetchForecast(this.props.city, this.props.country)
+                .then((result) => {
+                    this.setState(result);
+                })
+                .catch((error) => {
+                        this.setState({
+                            loading: false,
+                            error: true
+                        })
+                    }
+                );
+        }, 300);
+    }
+
+    // details state functions
+
+    showDetails(day) {
+        this.setState({
+            showingDetails: true,
+            details: this.state.dayList.filter(a =>
+                getWeekDay(a.dt) === getWeekDay(day.dt))
+        });
+    }
+
+    unShowDetails() {
+        this.setState({showingDetails: false})
+    }
+
+    // render
+
+    render() {
+        console.log(this.state);
+
+        let hoy = new Date().getDate();
+        if (this.state.error) {
+            return <ErrorMessage visible={true} message={"An error occurred"}/>
+        }
+
+        if (this.state.loading) {
+            return <LoadingThrob visible={true}/>
+        }
+
+        if (this.state.showingDetails) {
+            return <ForecastCardDetail
                 onBack={this.unShowDetails.bind(this)}
-                details={[this.state.details]}/>
-    }
+                details={this.state.details}
+            />
+        }
 
-    return (
-      <div>
-        {this.state.dayList.map((day,index) => {
-          console.log("FORECAST INTENTO");
-          console.log(day);
-          console.log(index);
-          //this.setState({x: this.state.x+1});
-          return <ForecastCard
-              //ver este showdet
-            showDetails={this.showDetails.bind(this)}
-            key={index}
-            day={day}
-          />
-        })}
-      </div>
-    )
-  }
+        return (
+            <div>
+                {this.state.dayList.filter(e => hoy !== new Date(e.dt * 1000).getDate())
+                    .filter(a => "00:00:00" === new Date(a.dt * 1000).toString().split(" ")[4])
+                    .map((day, index) => {
+                        return <ForecastCard
+                            showDetails={this.showDetails.bind(this)}
+                            toDay={new Date(day.dt * 1000).toString().slice(0, 3)}
+                            key={index}
+                            day={day}
+                        />
+                    })}
+            </div>
+        )
+    }
 }
 

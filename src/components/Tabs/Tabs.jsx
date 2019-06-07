@@ -44,7 +44,7 @@ export default class Tabs extends Component {
     }
 
     return (
-      <div>
+      <div className="Tabs">
         <button className={"current"}
                 id={tabStates.CURRENT}
                 onClick={this.changeChildState.bind(this)}>
@@ -60,7 +60,9 @@ export default class Tabs extends Component {
                 onClick={this.changeChildState.bind(this)}>
           UVI
         </button>
+        <div className="Tabs-content">
         {this.getChildFromCurState()}
+        </div>
       </div>
     )
   }

@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-
+import {getHour} from "../../../../utils/dateUtils";
 export default class ForecastCardDetail extends Component {
 
   onBackClicked() {
@@ -7,24 +7,25 @@ export default class ForecastCardDetail extends Component {
   }
 
   render() {
-    console.log("FORECAST DETAIL");
-    console.log(this.props.details);
     return (
       <div onClick={this.onBackClicked.bind(this)}>
         {this.props.details.map((detail) =>
           <div>
-            Temp:
-            {detail.temp}
-            Temp_min:
-            {detail.temp_min}
-            Temp_max:
-            {detail.temperature_max}
+            {getHour(detail.dt)+":00-"}
+            {detail.dt_txt.split(" ")[1].slice(0,5)+" "}
+            <img src= {"http://openweathermap.org/img/w/"
+            + detail.weather[0].icon + ".png"}/>
+            {detail.main.temp+" "}
             Pressure:
-            {detail.pressure}
+            {detail.main.pressure+" "}
             Humidity:
-            {detail.humidity}
-            Temp_kf:
-            {detail.temp_kf}
+            {detail.main.humidity+ "%  "}
+            Wind:
+            {detail.wind.speed + " Km/h  "}
+            Min Temp:
+            {detail.main.temp_min+ " "}
+            Max Temp:
+            {detail.main.temp_max+" "}
           </div>
         )}
       </div>

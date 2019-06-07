@@ -27,7 +27,6 @@ class Current extends React.Component{
       .then(
         (result) => {
           this.setState(result);
-          console.log(result);
         }).catch((error) => {
             this.setState({ error: true });
     });
@@ -40,8 +39,7 @@ class Current extends React.Component{
 
   render(){
     if (this.state.error) {
-      return <ErrorMessage visible={true} message={"An error occurred or city not" +
-      " exist"}/>
+      return <ErrorMessage visible={true} message={"An error occurred" }/>
     }
 
     if (this.state.loading) {
@@ -56,7 +54,7 @@ class Current extends React.Component{
             + this.state.icon + ".png"}/></span>
           </p>
           <p className="weather__key">Pressure:
-            <span className="weather__value"> {this.state.pressure + "hpm"}</span>
+            <span className="weather__value"> {this.state.pressure + " hpm"}</span>
           </p>
           <p className="weather__key">Humidity:
             <span className="weather__value">  {this.state.humidity + "%"}</span>
