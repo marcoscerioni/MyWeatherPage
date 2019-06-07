@@ -3,21 +3,28 @@ import React, {Component} from "react";
 export default class ForecastCardDetail extends Component {
 
   onBackClicked() {
-    this.props.onBack()
+    this.props.onBack();
   }
 
   render() {
     console.log("FORECAST DETAIL");
-    console.log(this.props.details.filter(function(item){
-      return (item.dt_txt.split(" ")[1] === "00:00:00")})[0].dt_txt.split(" ")[0]);
+    console.log(this.props.details);
     return (
       <div onClick={this.onBackClicked.bind(this)}>
-        {this.props.details.filter(function(item){
-          return (item.dt_txt.split(" ")[1] === "00:00:00")}).map((detail) =>
+        {this.props.details.map((detail) =>
           <div>
-            Day ver clima cada tres horas:
-            {detail}
-
+            Temp:
+            {detail.temp}
+            Temp_min:
+            {detail.temp_min}
+            Temp_max:
+            {detail.temperature_max}
+            Pressure:
+            {detail.pressure}
+            Humidity:
+            {detail.humidity}
+            Temp_kf:
+            {detail.temp_kf}
           </div>
         )}
       </div>

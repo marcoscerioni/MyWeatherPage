@@ -29,7 +29,8 @@ export default class Tabs extends Component {
       case tabStates.FORECAST:
         return <Forecast
           city={this.props.city}
-          country={this.props.country} />;
+          country={this.props.country}
+        />;
       case tabStates.UVI:
         return <div>NOT IMPLEMENTED</div>;
       default:

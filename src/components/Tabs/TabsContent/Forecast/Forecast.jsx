@@ -13,8 +13,7 @@ export default class Forecast extends Component {
       loading: true,
       error: false,
       showingDetails: false,
-
-    }
+    };
   }
 
   // fetchForecast functions
@@ -38,23 +37,38 @@ export default class Forecast extends Component {
       .catch((error) => {
         this.setState({ error: true })}
       );
-      this.showDetails();
     }, 300);
   }
 
   // details state functions
 
-  showDetails() {
+  showDetails(details) {
     this.setState({
       showingDetails: true,
-
+      details: details,
     })
   }
 
   unShowDetails() {
     this.setState({showingDetails: false})
   }
-
+/*
+  toDay(){
+    const weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+    const d = new Date();
+    if(x===5)
+      this.setState({x: 0});
+    this.setState({
+      toDay: weekday[(d.getDate() - (x-1))%7],
+    });
+  }*/
   // render
 
   render() {
@@ -70,18 +84,24 @@ export default class Forecast extends Component {
 
     if (this.state.showingDetails) {
       console.log("DETAIL FORCAST");
-      console.log(this.state.dayList);
+      console.log(this.state.showingDetails);
+      console.log(this.state.details);
       return <ForecastCardDetail
                 onBack={this.unShowDetails.bind(this)}
-                details={this.state.dayList}/>
+                details={[this.state.details]}/>
     }
 
     return (
       <div>
-        {this.state.dayList.map((day) => {
+        {this.state.dayList.map((day,index) => {
           console.log("FORECAST INTENTO");
+          console.log(day);
+          console.log(index);
+          //this.setState({x: this.state.x+1});
           return <ForecastCard
+              //ver este showdet
             showDetails={this.showDetails.bind(this)}
+            key={index}
             day={day}
           />
         })}
