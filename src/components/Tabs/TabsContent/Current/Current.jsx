@@ -61,45 +61,38 @@ class Current extends React.Component{
                 + this.state.icon + ".png"}/></span>
               </p>
 
-
-              <div className="temp" >
                 <p className="weather__key">
                   <span className="weather__value"> <h1> {this.state.temperature + "°C"} </h1></span>
                 </p>
-              </div>
 
-              <div className="city" >
                 <p className="weather__key">
                   <span className="weather__value">  {this.state.city}</span>
                 </p>
-              </div>
 
-              <div className="tempMinMax" >
-                <p className="weather__key">Min Temperature:
+              <p className="weather__key"><b>Min Temperature:</b>
                   <span className="weather__value">  {this.state.temperature_min + "°C"} </span>
                 </p>
-                <p className="weather__key">Max Temperature:
+              <p className="weather__key"><b>Max Temperature:</b>
                   <span className="weather__value">  {this.state.temperature_max + "°C"}</span>
                 </p>
-              </div>
             </div>
 
 
 
             <div className="box2" >
-              <p className="weather__key">Pressure:
+              <p className="weather__key"><b>Pressure:</b>
                 <span className="weather__value"> {this.state.pressure + "hpm"}</span>
               </p>
-              <p className="weather__key">Humidity:
+              <p className="weather__key"><b>Humidity:</b>
                 <span className="weather__value">  {this.state.humidity + "%"}</span>
               </p>
-              <p className="weather__key">Wind:
+              <p className="weather__key"><b>Wind:</b>
                 <span className="weather__value">  {this.state.wind + "km/h"}</span>
               </p>
-              <p className="weather__key">Sunrise:
+              <p className="weather__key"><b>Sunrise:</b>
                 <span className="weather__value">  {Current.convert(this.state.sunrise)}</span>
               </p>
-              <p className="weather__key">Sunset:
+              <p className="weather__key"><b>Sunset:</b>
                 <span className="weather__value">  {Current.convert(this.state.sunset)}</span>
               </p>
             </div>

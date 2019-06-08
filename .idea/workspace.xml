@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acc779c1-2038-460e-a84a-8eacfaaf8244" name="Default Changelist" comment="Cambiando un poco de estilo, esta mas lindo.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Tabs/Tabs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tabs/Tabs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Tabs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tabs/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Tabs/TabsContent/Current/Current.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tabs/TabsContent/Current/Current.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,19 +21,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/Current.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            <state relative-caret-position="476">
+              <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Tabs/Tabs.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-340">
+              <caret line="50" column="30" lean-forward="true" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Tabs/Tabs.jsx">
+        <entry file="file://$PROJECT_DIR$/src/components/Tabs/TabsContent/Current/Current.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="45" column="61" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
+            <state relative-caret-position="442">
+              <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -51,6 +56,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/weatherActions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -107,7 +121,6 @@
       <find>mayweat</find>
       <find>pink</find>
       <find>Welcome</find>
-      <find>press</find>
       <find>now</find>
       <find>red</find>
       <find>or city</find>
@@ -118,6 +131,7 @@
       <find>getC</find>
       <find>check</find>
       <find>import T</find>
+      <find>press</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -160,12 +174,12 @@
         <option value="$PROJECT_DIR$/public/Current.css" />
         <option value="$PROJECT_DIR$/src/templates/ErrorMessage/ErrorMessage.jsx" />
         <option value="$PROJECT_DIR$/src/index.css" />
-        <option value="$PROJECT_DIR$/src/components/Tabs/TabsContent/Current/Current.jsx" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/Form.jsx" />
         <option value="$PROJECT_DIR$/src/components/App.jsx" />
         <option value="$PROJECT_DIR$/src/components/Tabs/index.js" />
         <option value="$PROJECT_DIR$/src/components/Tabs/Tabs.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Tabs/TabsContent/Current/Current.jsx" />
       </list>
     </option>
   </component>
@@ -196,6 +210,12 @@
               <item name="grupo03_lab03_2019" type="b2602c69:ProjectViewProjectNode" />
               <item name="grupo03_lab03_2019" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="grupo03_lab03_2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grupo03_lab03_2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="grupo03_lab03_2019" type="b2602c69:ProjectViewProjectNode" />
@@ -235,6 +255,12 @@
               <item name="Tabs" type="462c0819:PsiDirectoryNode" />
               <item name="TabsContent" type="462c0819:PsiDirectoryNode" />
               <item name="Forecast" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="grupo03_lab03_2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grupo03_lab03_2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="constants" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -316,7 +342,7 @@
       <workItem from="1559736089659" duration="721000" />
       <workItem from="1559742522245" duration="3285000" />
       <workItem from="1559854753554" duration="7551000" />
-      <workItem from="1559994701024" duration="13745000" />
+      <workItem from="1559994701024" duration="14139000" />
     </task>
     <task id="LOCAL-00001" summary="Haciendo un poquito de front">
       <created>1559257686524</created>
@@ -427,7 +453,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114160000" />
+    <option name="totallyTimeSpent" value="114554000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -442,7 +468,28 @@
     <frame x="0" y="-32" width="1920" height="1112" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49561402" visible="true" weight="0.015814444" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49561402" visible="true" weight="0.1960991" />
+      <window_info id="Structure" order="1" sideWeight="0.50548244" side_tool="true" weight="0.18133895" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" sideWeight="0.50438595" side_tool="true" weight="0.18133895" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26680455" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32885212" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49973643" weight="0.34850052" />
+      <window_info anchor="bottom" id="GraphQL" order="9" weight="0.32885212" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002636" side_tool="true" weight="0.24780701" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49710068" weight="0.23681489" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49561402" weight="0.015814444" />
       <window_info id="Structure" order="1" sideWeight="0.50548244" side_tool="true" weight="0.18133895" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" sideWeight="0.50438595" side_tool="true" weight="0.18133895" />
@@ -461,7 +508,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -643,13 +690,6 @@
     <entry file="file://$PROJECT_DIR$/src/templates/ErrorMessage/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/weatherActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Tabs/TabsContent/Forecast/Forecast.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
@@ -660,20 +700,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Tabs/TabsContent/Current/Current.jsx">
+    <entry file="file://$PROJECT_DIR$/public/Current.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1086">
-          <caret line="72" column="77" lean-forward="true" selection-start-line="72" selection-start-column="77" selection-end-line="72" selection-end-column="77" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="476">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/Current.css">
+    <entry file="file://$PROJECT_DIR$/src/components/Tabs/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="68">
+          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -701,19 +738,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Tabs/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Tabs/Tabs.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        <state relative-caret-position="-340">
+          <caret line="50" column="30" lean-forward="true" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Tabs/Tabs.jsx">
+    <entry file="file://$PROJECT_DIR$/src/actions/weatherActions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="45" column="61" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
+        <state relative-caret-position="340">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Tabs/TabsContent/Current/Current.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
