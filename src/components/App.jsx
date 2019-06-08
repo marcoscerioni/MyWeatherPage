@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import Form from "./Form";
-import Tabs from "./Tabs"
+import Tabss from "./Tabs"
 
 class App extends Component{
 
@@ -39,7 +39,7 @@ class App extends Component{
           onSubmit={this.onSubmit.bind(this)}
           onInputChange={this.onInputChange.bind(this)} />
 
-        <Tabs
+        <Tabss
           visible={this.state.submitted}
           city={this.state.city}
           country={this.state.country} />

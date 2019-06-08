@@ -1,5 +1,7 @@
 import React from "react";
-
+import 'react-mdl/extra/material.css';
+import 'react-mdl/extra/material.js';
+import { Button, Textfield} from 'react-mdl';
 
 class Form extends React.Component{
 
@@ -17,44 +19,34 @@ class Form extends React.Component{
                     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
                     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css"/>
                     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+
                 </head>
                 <body>
 
                 <div className="col">
-                    <form action="#">
-                        <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input onChange={this.onInputChange.bind(this)} name = "city"
-                                   className="mdl-textfield__input" type="text" id="sample3"/>
-                            <label className="mdl-textfield__label" htmlFor="sample3">Enter the city</label>
-                        </div>
-                    </form>
+                    <Textfield
+                        onChange={this.onInputChange.bind(this)} name = "city"
+                        label="Enter the city"
+                        floatingLabel
+                        style={{width: '200px'}}
+                    />
                 </div>
 
+
                  <div className="col">
-                    <form action="#">
-                    <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input onChange={this.onInputChange.bind(this)} name = "country"
-                               className="mdl-textfield__input" type="text" id="sample3"/>
-                        <label className="mdl-textfield__label" htmlFor="sample3">Enter the country</label>
-                    </div>
-                    </form>
+                     <Textfield
+                         onChange={this.onInputChange.bind(this)} name = "country"
+                         label="Enter the country"
+                         floatingLabel
+                         style={{width: '200px'}}
+                    />
                  </div>
                 </body>
                 </html>
 
 
                 <html>
-                <head>
-                    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-                    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-lightblue.min.css"/>
-                    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-                </head>
-                <body>
-                <button onClick={this.props.onSubmit.bind(this)}
-                        className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                    Check Weather
-                </button>
-                </body>
+                <Button raised accent ripple onClick={this.props.onSubmit.bind(this)} >Check Weather </Button>
                 </html>
             </div>
         )

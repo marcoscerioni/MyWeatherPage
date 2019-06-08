@@ -2,14 +2,13 @@ import React, {Component} from "react";
 import {tabStates} from "../../constants/tabStates";
 import Current from "./TabsContent/Current/Current";
 import Forecast from "./TabsContent/Forecast/Forecast";
+import {Tabs, Tab, TabBar} from 'react-mdl';
 
-export default class Tabs extends Component {
+export default class Tabss extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      curState: tabStates.CURRENT,
-    }
+    this.state = { curState: tabStates.CURRENT };
   }
 
   // state handler methods
@@ -43,7 +42,30 @@ export default class Tabs extends Component {
     }
 
     return (
-      <div>
+        <div className="demo-tabs">
+            <Tabs activeTab={this.state.curState} onChange={(tabId) => this.setState({curState: tabId})}
+                  ripple>
+                <Tab></Tab>
+                <Tab>Current</Tab>
+                <Tab>Forecast</Tab>
+                <Tab>UVI</Tab>
+
+            </Tabs>
+            <section>
+                <div onClick={this.changeChildState.bind(this)}> </div>
+            </section>
+            {this.getChildFromCurState()}
+        </div>
+
+        /*
+            <button
+            id={tabStates.CURRENT} onClick={this.changeChildState.bind(this)}>
+            Current
+        </button>
+         */
+
+        /*
+        <div>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
           <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-lightblue.min.css"/>
@@ -101,7 +123,13 @@ export default class Tabs extends Component {
 
         {this.getChildFromCurState()}
       </div>
+
+     */
+
+
     )
+
+
   }
 
 }
