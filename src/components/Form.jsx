@@ -19,22 +19,29 @@ class Form extends React.Component{
                     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
                 </head>
                 <body>
-                <form action="#">
-                    <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input onChange={this.onInputChange.bind(this)} name = "city"
-                               className="mdl-textfield__input" type="text" id="sample3"/>
-                        <label className="mdl-textfield__label" htmlFor="sample3">Enter the city</label>
-                    </div>
-                </form>
-                <form action="#">
+
+                <div className="col">
+                    <form action="#">
+                        <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input onChange={this.onInputChange.bind(this)} name = "city"
+                                   className="mdl-textfield__input" type="text" id="sample3"/>
+                            <label className="mdl-textfield__label" htmlFor="sample3">Enter the city</label>
+                        </div>
+                    </form>
+                </div>
+
+                 <div className="col">
+                    <form action="#">
                     <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input onChange={this.onInputChange.bind(this)} name = "country"
                                className="mdl-textfield__input" type="text" id="sample3"/>
                         <label className="mdl-textfield__label" htmlFor="sample3">Enter the country</label>
                     </div>
-                </form>
+                    </form>
+                 </div>
                 </body>
                 </html>
+
 
                 <html>
                 <head>
@@ -52,6 +59,7 @@ class Form extends React.Component{
             </div>
         )
     }
+
 }
 
 export default Form;

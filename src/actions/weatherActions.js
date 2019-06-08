@@ -14,6 +14,7 @@ export function fetchCurrent(city, country, units="metric") {
             humidity : result.main.humidity,
             wind: result.wind.speed,
             temperature : result.main.temp,
+            city : result.name,
             temperature_min: result.main.temp_min,
             temperature_max : result.main.temp_max,
             sunrise: result.sys.sunrise,
