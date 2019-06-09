@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {Card, CardTitle, CardText, CardActions, Button} from "react-mdl";
 
 export default class ForecastCard extends Component {
 
@@ -8,16 +9,31 @@ export default class ForecastCard extends Component {
 
   render() {
     return (
+
+    <div className={"box"}>
       <div onClick={this.showDetails.bind(this)} >
         <div className="general">
-          {this.props.toDay+"  "}
-          {this.props.day.dt_txt.split(" ")[0]+"  "}
+
+            <div className="a">
+          {this.props.toDay+"  "} {this.props.day.dt_txt.split(" ")[0]+"  "}
+            </div>
+
+            <div className="b">
           <img src= {"http://openweathermap.org/img/w/"
             + this.props.day.weather[0].icon + ".png"}/>
-          {this.props.day.main.temp_max + "  "}
-          {this.props.day.main.temp_min + "  "}
+            </div>
+
+            <div class="c">
+          {"Max: " + this.props.day.main.temp_max + " °C"}
+        </div>
+
+          <div class="d">
+              { "Min :  " + this.props.day.main.temp_min + " °C"}
+      </div>
+
         </div>
       </div>
+  </div>
     );
   }
 }

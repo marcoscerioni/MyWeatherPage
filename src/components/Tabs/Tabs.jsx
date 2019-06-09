@@ -3,7 +3,7 @@ import {tabStates} from "../../constants/tabStates";
 import Current from "./TabsContent/Current/Current";
 import Forecast from "./TabsContent/Forecast/Forecast";
 
-export default class Tabs extends Component {
+export default class Tabss extends Component {
 
   constructor(props) {
     super(props);
