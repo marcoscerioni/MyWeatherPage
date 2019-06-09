@@ -1,6 +1,5 @@
-
 export const tabStates = {
-  CURRENT: 1,
-  FORECAST: 2,
-  UVI: 3
+  CURRENT: 0,
+  FORECAST: 1,
+  UVI: 2
 };

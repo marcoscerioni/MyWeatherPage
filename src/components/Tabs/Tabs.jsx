@@ -1,11 +1,10 @@
-import React, {Component} from "react";
-import {tabStates} from "../../constants/tabStates";
+import React, { Component } from "react";
+import { tabStates } from "../../constants/tabStates";
 import Current from "./TabsContent/Current/Current";
 import Forecast from "./TabsContent/Forecast/Forecast";
-import {Tabs, Tab, TabBar} from 'react-mdl';
+import { Tabs, Tab } from "react-mdl";
 
 export default class Tabss extends Component {
-
   constructor(props) {
     super(props);
     this.state = { curState: tabStates.CURRENT };
@@ -15,24 +14,20 @@ export default class Tabss extends Component {
   changeChildState(event) {
     this.setState({
       curState: parseInt(event.target.id)
-    })
+    });
   }
 
   // render methods
   getChildFromCurState() {
     switch (this.state.curState) {
       case tabStates.CURRENT:
-        return <Current
-            city={this.props.city}
-            country={this.props.country} />;
+        return <Current city={this.props.city} country={this.props.country} />;
       case tabStates.FORECAST:
-        return <Forecast
-            city={this.props.city}
-            country={this.props.country} />;
+        return <Forecast city={this.props.city} country={this.props.country} />;
       case tabStates.UVI:
         return <div>NOT IMPLEMENTED</div>;
       default:
-        return null
+        return null;
     }
   }
 
@@ -42,25 +37,21 @@ export default class Tabss extends Component {
     }
 
     return (
-        <div className="demo-tabs">
-          <Tabs activeTab={this.state.curState} onChange={(tabId) => this.setState({curState: tabId})}
-                ripple>
-            <Tab></Tab>
-            <Tab>Current</Tab>
-            <Tab>Forecast</Tab>
-            <Tab>UVI</Tab>
-
-          </Tabs>
-          <section>
-            <div onClick={this.changeChildState.bind(this)}> </div>
-          </section>
-          {this.getChildFromCurState()}
-        </div>
-
-
-    )
-
-
+      <div className="demo-tabs">
+        <Tabs
+          activeTab={this.state.curState}
+          onChange={tabId => this.setState({ curState: tabId })}
+          ripple
+        >
+          <Tab>Current</Tab>
+          <Tab>Forecast</Tab>
+          <Tab>UVI</Tab>
+        </Tabs>
+        <section>
+          <div onClick={this.changeChildState.bind(this)}> </div>
+        </section>
+        {this.getChildFromCurState()}
+      </div>
+    );
   }
-
 }

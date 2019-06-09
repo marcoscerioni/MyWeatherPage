@@ -1,9 +1,8 @@
-import React,{Component} from "react";
+import React, { Component } from "react";
 import Form from "./Form";
-import Tabss from "./Tabs"
+import Tabss from "./Tabs";
 
-class App extends Component{
-
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,30 +20,34 @@ class App extends Component{
     this.setState({
       [name]: value,
       submitted: false
-    })
+    });
   }
 
-
-  render()
-  {
+  render() {
     return (
-        <div>
-
-          <div className={"Title"} style={{display: 'flex',justifyContent:'center',
-            alignItems: 'center' }}>
-            <h1>Welcome to MayWeather</h1>
-          </div>
-
-          <Form
-              onSubmit={this.onSubmit.bind(this)}
-              onInputChange={this.onInputChange.bind(this)} />
-
-          <Tabss
-              visible={this.state.submitted}
-              city={this.state.city}
-              country={this.state.country} />
-
+      <div>
+        <div
+          className={"Title"}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
+          <h1>Welcome to MayWeather</h1>
         </div>
+
+        <Form
+          onSubmit={this.onSubmit.bind(this)}
+          onInputChange={this.onInputChange.bind(this)}
+        />
+
+        <Tabss
+          visible={this.state.submitted}
+          city={this.state.city}
+          country={this.state.country}
+        />
+      </div>
     );
   }
 }
