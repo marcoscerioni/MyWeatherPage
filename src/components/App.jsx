@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import Form from "./Form";
-import Tabs from "./Tabs"
+import Tabss from "./Tabs"
 
 class App extends Component{
 
@@ -28,23 +28,23 @@ class App extends Component{
   render()
   {
     return (
-      <div>
+        <div>
 
-        <div className={"Title"} style={{display: 'flex',justifyContent:'center',
-          alignItems: 'center' }}>
-          <h1>Welcome to my MayWeather</h1>
+          <div className={"Title"} style={{display: 'flex',justifyContent:'center',
+            alignItems: 'center' }}>
+            <h1>Welcome to MayWeather</h1>
+          </div>
+
+          <Form
+              onSubmit={this.onSubmit.bind(this)}
+              onInputChange={this.onInputChange.bind(this)} />
+
+          <Tabss
+              visible={this.state.submitted}
+              city={this.state.city}
+              country={this.state.country} />
+
         </div>
-
-        <Form
-          onSubmit={this.onSubmit.bind(this)}
-          onInputChange={this.onInputChange.bind(this)} />
-
-        <Tabs
-          visible={this.state.submitted}
-          city={this.state.city}
-          country={this.state.country} />
-
-      </div>
     );
   }
 }
