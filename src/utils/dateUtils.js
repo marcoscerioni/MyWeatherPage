@@ -7,3 +7,7 @@ export function getHour(dt) {
   if (hour <= 9) hour = "0" + hour;
   return hour;
 }
+
+export function rain_converter(rain) {
+    return rain["3h"] + "%" ;
+}

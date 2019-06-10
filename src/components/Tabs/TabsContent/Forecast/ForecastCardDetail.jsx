@@ -1,11 +1,15 @@
 import React, { Component } from "react";
-import { getHour } from "../../../../utils/dateUtils";
+import {getHour, rain_converter} from "../../../../utils/dateUtils";
 export default class ForecastCardDetail extends Component {
   onBackClicked() {
     this.props.onBack();
   }
 
   render() {
+    const { details: { rain }} = this.props;
+    console.log("RAINNNNNN");
+
+    console.log(this.props);
     return (
       <div onClick={this.onBackClicked.bind(this)}>
         {this.props.details.map(detail => (
@@ -47,11 +51,15 @@ export default class ForecastCardDetail extends Component {
               </div>
 
               <div className="g">
+                {detail.rain ? <h10>Rain: {rain_converter(detail.rain)}</h10>:<h10>Rain: 0%</h10>}
+              </div>
+
+              <div className="h">
                 Min Temp:
                 {detail.main.temp_min + " °C"}
               </div>
 
-              <div className="h">
+              <div className="i">
                 Max Temp:
                 {detail.main.temp_max + " °C"}
               </div>

@@ -75,3 +75,6 @@ body{
 .g + .h{
     margin-top: 1em;
 }
+.h + .i {
+    margin-top: 1em;
+}

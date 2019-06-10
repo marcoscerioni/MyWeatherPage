@@ -61,7 +61,7 @@ export default class Forecast extends Component {
   // render
 
   render() {
-    console.log(this.state);
+
 
     let hoy = new Date().getDate();
     if (this.state.error) {
