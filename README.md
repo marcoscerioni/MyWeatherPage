@@ -9,12 +9,21 @@ Clonamos el repositorio:
 
     git clone https://marcoscerioni@bitbucket.org/paradigmas-programacion-famaf/grupo03_lab03_2019.git
 
+En caso en el que no tenga instalado node y npm :
+
+     $ sudo apt install nodejs
+     $ sudo apt install npm
+
+Recomendamos que la version del node : v10.15.3 y la version del npm : 6.4.1
+
 Luego nos paramos en donde se encuentra la carpeta del laboratorio. 
 Dentro de la carpeta instalamos lo siguiente desde la terminal:
 
 	 $ npm install
 	 $ npm install --save react-mdl
 	 $ npm start
+
+
 	 
 Luego abrimos en el navegador http://localhost:8080/ para poder correr la aplicación web.
 
