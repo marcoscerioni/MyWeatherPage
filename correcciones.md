@@ -5,9 +5,9 @@
 ### Entrega		100.00%
 	Tag correcto	100.00%
 	En tiempo	100.00%
-### Funcionalidad		59.00%
+### Funcionalidad		99.00%
 	"Current" funciona correctamente (se actualiza cada vez que se busca una nueva ciudad)	100.00%
-	"Forecast" funciona correctamente (se muestra el listado de dias y si hago click veo el detalle para un dia)	0.00%
+	"Forecast" funciona correctamente (se muestra el listado de dias y si hago click veo el detalle para un dia)	100.00%
 	El search box funciona correctament (si ingreso el nombre de una ciudad y presiono el boton se actualiza la información)	100.00%
 	Se muestra un spinning wheel throbber cuando se buscan los datos de una ciudad	100.00%
 	Los errores (si los hay) se muestran con un mensaje en pantalla. 	80.00%
@@ -29,7 +29,7 @@
 	Punto estrella: Utilización de la GeolocalizationAPI del browser para auto completar el search box	0.00%
 	Punto Estrella: Permitir que el usuario pueda elegir el sistema métrico en el que quiere expresada la información	0.00%
 		
-# Nota Final		6.145
+# Nota Final		8.065
 		
 		
 # Comentarios		
