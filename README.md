@@ -11,7 +11,7 @@ Clonamos el repositorio:
 
 Luego entramos en la carpeta: 
 
-    cd grupo03_lab03_2019/
+    cd MyWeatherPage/
     
 En caso en el que no tenga instalado node y npm, lo instalamos :
 
