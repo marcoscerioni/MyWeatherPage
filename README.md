@@ -7,25 +7,29 @@ En este laboratorio teníamos que hacer una aplicación del clima con React. Tod
 
 Clonamos el repositorio: 
 
-    git clone https://marcoscerioni@bitbucket.org/paradigmas-programacion-famaf/grupo03_lab03_2019.git
+    git clone https://github.com/marcoscerioni/MyWeatherPage.git
 
-En caso en el que no tenga instalado node y npm :
+Luego entramos en la carpeta: 
 
-     $ sudo apt install nodejs
-     $ sudo apt install npm
+    cd grupo03_lab03_2019/
+    
+En caso en el que no tenga instalado node y npm, lo instalamos :
 
-Recomendamos que la version del node : v10.15.3 y la version del npm : 6.4.1
+     sudo apt install nodejs
+     sudo apt install npm
 
-Luego nos paramos en donde se encuentra la carpeta del laboratorio. 
-Dentro de la carpeta instalamos lo siguiente desde la terminal:
+Recomendamos que la version del node  sea: v10.15.3 o superior y la version del npm sea : 6.4.1 o superior
 
-	 $ npm install
-	 $ npm install --save react-mdl
-	 $ npm start
+Luego instalamos npm, react-mdl y prendemos el server:
 
+	 npm install
+	 npm install --save react-mdl
+	 npm start
 
-	 
 Luego abrimos en el navegador http://localhost:8080/ para poder correr la aplicación web.
+
+## Demo
+![Demo MayWeather](https://lh3.googleusercontent.com/gvWeJbZBqMAmAeACeO6zFKx1F6XKZapGSOBv7yFjC5p9kpGeYy68j6zBEUwQLZBaeskBIB5sd7GAaA=s1000)
 
 ## Modularización
 
@@ -58,3 +62,4 @@ Luego abrimos en el navegador http://localhost:8080/ para poder correr la aplica
  Luego en componenets decidimos modularizar los Tabs en dos grandes carpetas: la de current y la de forecast. 
  En la carpeta Forecast se encuentran 3 archivos, decidimos modularizarlo así para que cuando Forecast.jsx cambie de estado, llame a algunos de los otros dos archivos. 
  Decidimos también que al hacer click en una Card de forecast, se muestre el clima en diferentes horarios, y al hacer click otra vez en alguna de estas, vuelve otra vez al forecastCard de los 5 días. 
+
