@@ -29,7 +29,7 @@ Luego instalamos npm, react-mdl y prendemos el server:
 Luego abrimos en el navegador http://localhost:8080/ para poder correr la aplicación web.
 
 ## Demo
-![Demo MayWeather](https://lh3.googleusercontent.com/gvWeJbZBqMAmAeACeO6zFKx1F6XKZapGSOBv7yFjC5p9kpGeYy68j6zBEUwQLZBaeskBIB5sd7GAaA=s1000)
+![](Demo.gif)
 
 ## Modularización
 
